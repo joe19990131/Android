@@ -12,57 +12,40 @@
         android:layout_height="49dp"
         android:layout_marginEnd="32dp"
         android:layout_marginTop="68dp"
+        android:onClick="bmi"
         android:text="Calculate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/ed_height" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/ed_weight"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="Weight"
-        android:inputType="number"
+        android:inputType="numberDecimal"
+        android:textColor="#6896ff"
         android:textColorLink="#6896ff"
-        app:layout_constraintEnd_toStartOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
-        android:layout_width="272dp"
-        android:layout_height="44dp"
+        android:id="@+id/ed_height"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="Height"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textColorLink="#6896ff"
-        app:layout_constraintStart_toStartOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="80dp"
-        android:layout_height="37dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editText" />
-
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="74dp"
-        android:layout_height="37dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editText2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editText2"
-        app:layout_constraintTop_toTopOf="@+id/editText2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_weight" />
 
 </android.support.constraint.ConstraintLayout>
