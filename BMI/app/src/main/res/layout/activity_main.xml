@@ -7,11 +7,11 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/Calculate"
-        android:layout_width="wrap_content"
+        android:id="@+id/btu_calculate"
+        android:layout_width="0dp"
         android:layout_height="49dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="84dp"
         android:onClick="bmi"
         android:text="Calculate"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,5 +47,59 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ed_weight" />
+
+    <Button
+        android:id="@+id/btn_history"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:text="history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btu_calculate"
+        app:layout_constraintTop_toBottomOf="@+id/btu_calculate" />
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="man"
+        app:layout_constraintEnd_toStartOf="@+id/radioButton3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_height" />
+
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="women"
+        app:layout_constraintStart_toEndOf="@+id/radioButton2"
+        app:layout_constraintTop_toBottomOf="@+id/ed_height" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="201dp"
+        android:layout_height="154dp"
+        android:layout_marginBottom="84dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_help"
+        android:layout_width="102dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="12dp"
+        android:text="help"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btn_history"
+        app:layout_constraintTop_toBottomOf="@+id/btn_history" />
 
 </android.support.constraint.ConstraintLayout>
