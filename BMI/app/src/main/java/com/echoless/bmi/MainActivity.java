@@ -14,8 +14,6 @@ import android.widget.Toast;
 import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
-    Scanner sc1 = new Scanner(System.in);
-
     float weight;
     float height;
     private EditText edWeight;
