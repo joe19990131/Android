@@ -23,10 +23,25 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        findViews();
+    }
+
+    private void findViews() {
         edWeight = findViewById(R.id.ed_weight);
         edHeight = findViewById(R.id.ed_height);
-
+        Button help = findViewById(R.id.btn_help);
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle(R.string.bmi_discription)
+                        .setMessage(R.string.info)
+                        .setPositiveButton(R.string.ok_click,null)
+                        .show();
+            }
+        });
     }
+
     public void bmi(View view){
         //Log.d("MainActivity","bmi");
         String w = edWeight.getText().toString();
@@ -38,15 +53,15 @@ public class MainActivity extends AppCompatActivity {
         //Toast.makeText(this,String.valueOf(bmi),Toast.LENGTH_LONG).show();
             new AlertDialog.Builder(this)
                     .setMessage(bmi+"")
-                    .setTitle("console")
-                    .setNegativeButton("CLEAR", new DialogInterface.OnClickListener() {
+                    .setTitle(R.string.console)
+                    .setNegativeButton(R.string.clear_click, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             edHeight.setText("");
                             edWeight.setText("");
                         }
                     })
-                    .setPositiveButton("OK",null)
+                    .setPositiveButton(R.string.ok_click,null)
                     .show();
     }
 

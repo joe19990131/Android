@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BMI</string>
+    <string name="calculate">執行</string>
+    <string name="weight">體重</string>
+    <string name="height">身高</string>
+    <string name="help">說明</string>
+    <string name="bmi_discription">BMI說明</string>
+    <string name="info">體重(公斤)除以身高(公尺)的平方</string>
+    <string name="ok_click">確認</string>
+    <string name="clear_click">清除</string>
+    <string name="console">執行結果</string>
+</resources>
