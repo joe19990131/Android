@@ -1,6 +1,7 @@
 package com.echoless.bmi;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -49,6 +50,13 @@ public class MainActivity extends AppCompatActivity {
         float weight = Float.parseFloat(w);
         float height = Float.parseFloat(h);
         float bmi = weight/(height*height);
+        Intent intent = new Intent(this,ResultActivity.class);
+        intent.putExtra("BMI_EXTRA",bmi);
+        startActivity(intent);
+
+
+
+
         //Log.d("MainActivity",height+"/"+weight+"/"+bmi);
         //Toast.makeText(this,String.valueOf(bmi),Toast.LENGTH_LONG).show();
             new AlertDialog.Builder(this)
