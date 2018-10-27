@@ -1,11 +1,9 @@
 package com.echoless.bmi;
 
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.telephony.SmsMessage;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -51,13 +49,9 @@ public class MainActivity extends AppCompatActivity {
         float weight = Float.parseFloat(w);
         float height = Float.parseFloat(h);
         float bmi = weight/(height*height);
-        Intent intent = new Intent(this,ResultActivity.class);
-        intent.putExtra("BMI_EXTRA",bmi);
-        startActivity(intent);
-
         //Log.d("MainActivity",height+"/"+weight+"/"+bmi);
         //Toast.makeText(this,String.valueOf(bmi),Toast.LENGTH_LONG).show();
-           /* new AlertDialog.Builder(this)
+            new AlertDialog.Builder(this)
                     .setMessage(bmi+"")
                     .setTitle(R.string.console)
                     .setNegativeButton(R.string.clear_click, new DialogInterface.OnClickListener() {
@@ -68,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     })
                     .setPositiveButton(R.string.ok_click,null)
-                    .show();*/
+                    .show();
     }
 
 
