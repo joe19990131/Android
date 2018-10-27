@@ -19,6 +19,7 @@ public class LoginActivity extends AppCompatActivity {
         edPassword = findViewById(R.id.ed_password);
     }
     public void login(View view){
+        findView();
     String uid = edAccound.getText().toString();
     String psw = edPassword.getText().toString();
     if(uid.equals("joe19990131")&&psw.equals("joe12345678")){

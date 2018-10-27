@@ -12,7 +12,7 @@ boolean logon = false;
         setContentView(R.layout.activity_main);
         if(!logon){
             Intent intent = new Intent(this,LoginActivity.class);
-
+            startActivity(intent);
         }
     }
 }
