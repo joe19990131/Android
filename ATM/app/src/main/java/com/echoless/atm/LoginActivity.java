@@ -1,5 +1,6 @@
 package com.echoless.atm;
 
+import android.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,10 +24,18 @@ public class LoginActivity extends AppCompatActivity {
     String uid = edAccound.getText().toString();
     String psw = edPassword.getText().toString();
     if(uid.equals("joe19990131")&&psw.equals("joe12345678")){
-        Toast.makeText(this,"Login finish",Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Login finish",Toast.LENGTH_LONG)
+                .show();
+                getIntent().putExtra("LOGIN_USERID",uid);
+                getIntent().putExtra("LOGIN_PASSWORD",psw);
+                setResult(RESULT_OK,getIntent());
+        finish();
     }else{
-        Toast.makeText(this,"Login false",Toast.LENGTH_LONG).show();
-
+        new AlertDialog.Builder(this)
+                .setTitle("ATM")
+                .setMessage("Login false")
+                .setPositiveButton("OK",null)
+                .show();
     }
     }
     public void cancel(View view){
