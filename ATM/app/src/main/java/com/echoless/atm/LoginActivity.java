@@ -39,6 +39,6 @@ public class LoginActivity extends AppCompatActivity {
     }
     }
     public void cancel(View view){
-
+    finish();
     }
 }

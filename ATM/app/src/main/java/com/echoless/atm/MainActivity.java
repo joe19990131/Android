@@ -7,6 +7,8 @@ import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 boolean logon = false;
+
+//頁面代碼
 public static final  int RC_LOGIN = 1;
 
 
@@ -22,12 +24,16 @@ public static final  int RC_LOGIN = 1;
     }@Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        //辨識頁面代碼
         if(requestCode == RC_LOGIN){
+
+            //check 有無帶回ok
             if(resultCode == RESULT_OK){
                 String uid = data.getStringExtra("LOGIN_USERID");
                 String psw = data.getStringExtra("LOGIN_PASSWORD");
                 Log.d("RESULT",uid + "/"+psw);
             }else{
+
                 finish();
             }
         }
