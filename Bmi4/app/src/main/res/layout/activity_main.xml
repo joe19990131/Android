@@ -13,7 +13,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="Weight"
+        android:hint="@string/weight"
         android:inputType="text|number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Height"
+        android:hint="@string/height"
         android:inputType="text|number"
         app:layout_constraintStart_toStartOf="@+id/ed_weight"
         app:layout_constraintTop_toBottomOf="@+id/ed_weight" />
@@ -33,10 +33,10 @@
         android:id="@+id/btn_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="52dp"
+        android:layout_marginEnd="48dp"
         android:layout_marginTop="28dp"
         android:onClick="bmi"
-        android:text="Button"
+        android:text="@string/calculate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ed_height" />
 </android.support.constraint.ConstraintLayout>

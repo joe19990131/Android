@@ -26,7 +26,7 @@ public static final int RC_LOGIN = 1;
             }else{
                 finish();
 
-                
+
             }
         }
     }
