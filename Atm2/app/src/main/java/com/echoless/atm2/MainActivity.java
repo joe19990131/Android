@@ -3,6 +3,7 @@ package com.echoless.atm2;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 Boolean login = false;
@@ -22,7 +23,8 @@ public static final int RC_LOGIN = 1;
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == RC_LOGIN){
             if(resultCode == RESULT_OK){
-
+                Intent intent = new Intent(this,SignUpNickName.class);
+                startActivity(intent);
             }else{
                 finish();
 
@@ -30,4 +32,6 @@ public static final int RC_LOGIN = 1;
             }
         }
     }
+
+
 }

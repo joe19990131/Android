@@ -2,6 +2,7 @@ package com.echoless.atm2;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,10 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        findViews();
+        String userid = getSharedPreferences("atm",MODE_PRIVATE)
+                .getString("USERID","");
+        edAccount.setText(userid);
     }
     public void findViews() {
         edAccount = findViewById(R.id.ed_account);
@@ -30,6 +35,10 @@ public class LoginActivity extends AppCompatActivity {
             getIntent().putExtra("USERID",uid);
             getIntent().putExtra("PASSWARD",psw);
             setResult(RESULT_OK,getIntent());
+            getSharedPreferences("atm",MODE_PRIVATE)
+                    .edit()
+                    .putString("USERID",uid)
+                    .apply();
             finish();
         }else if(!uid.equals("joe123456")){
             new AlertDialog.Builder(this)
@@ -46,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
         }else if(uid.equals("joe123456")&& !psw.equals("12345678")){
             new AlertDialog.Builder(this)
                     .setTitle("Login Error")
-                    .setMessage("Round Passward")
+                    .setMessage("Wround Passward")
                     .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -56,4 +65,6 @@ public class LoginActivity extends AppCompatActivity {
                     .show();
         }
     }
+
+
 }
