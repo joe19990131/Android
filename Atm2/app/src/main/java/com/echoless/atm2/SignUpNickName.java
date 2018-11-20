@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-public class SignUpNickName extends AppCompatActivity {
+public class SignUpNickName extends BaseActivity {
 String name;
 EditText ednickName;
     @Override
@@ -20,10 +20,7 @@ EditText ednickName;
     public void next(View view){
         findViews();
         name = ednickName.getText().toString();
-        getSharedPreferences("atm",MODE_PRIVATE)
-                .edit()
-                .putString("USERNAME",name)
-                .apply();
+       user.setName(name);
         Intent age = new Intent(this,SignUpAge.class);
         startActivity(age);
     }
