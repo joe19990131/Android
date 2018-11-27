@@ -52,8 +52,15 @@ public class User {
         settings.edit().putString("USERGENDER",gender).apply();
         this.gender = gender;
     }
+    public String getId() {
+        if(id == null){
+            id = settings.getString("USERID",id);
+        }
+        return id;
+    }
 
-
-
-
+    public void setId(String id) {
+        settings.edit().putString("USERID",id).apply();
+        this.id = id;
+    }
 }

@@ -52,10 +52,14 @@ public class User {
 
     }
     public String getId() {
+        if(id == null){
+            id = settings.getString("USERID",null);
+        }
         return id;
     }
 
     public void setId(String id) {
+        settings.edit().putString("USERID",id).apply();
         this.id = id;
     }
     public boolean isVaild(){

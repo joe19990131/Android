@@ -15,6 +15,7 @@ EditText edname;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_name);
+
     }
     public void findViews(){
         edname = findViewById(R.id.ed_name);

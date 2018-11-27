@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends BaseActivity {
     EditText edAccount;
     EditText edPassward;
 
@@ -16,6 +16,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+      findViews();
+       edAccount.setText(user.getId());
     }
     public void findViews(){
         edAccount = findViewById(R.id.ed_account);
