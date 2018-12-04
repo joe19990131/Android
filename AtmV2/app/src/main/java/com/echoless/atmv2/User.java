@@ -63,4 +63,10 @@ public class User {
         settings.edit().putString("USERID",id).apply();
         this.id = id;
     }
+    public Boolean isVaild(){
+        vaild = settings.getString("USERNAME",null)!=null&&settings.getString("USERAGE",null)!=null&&settings.getString("USERGENDER",null)!=null;
+            return vaild;
+
+
+    }
 }
