@@ -22,8 +22,8 @@ int[] num = {18,19,20,21};
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_age);
        RecyclerView recyclerView =findViewById(R.id.ageList);
-       recyclerView.setHasFixedSize(true);
-       recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
        recyclerView.setAdapter(new AgeAdapter());
     }
     public void findViews(){
