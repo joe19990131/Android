@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         poker.shuffle();
         RecyclerView recyclerView = findViewById(R.id.recycler);
         recyclerView.setHasFixedSize(true);
@@ -29,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
         @NonNull
         @Override
         public PokerHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-            View view  =getLayoutInflater().inflate(R.layout.poker_row,parent,false);
-            PokerHolder PokerHolder = new PokerHolder(view);
-            return new PokerHolder(view);
+           // View view  =getLayoutInflater().inflate(R.layout.poker_row,parent,false);
+            //PokerHolder PokerHolder = new PokerHolder(view);
+            return new PokerHolder(getLayoutInflater().inflate(R.layout.poker_row,parent,false));
 
         }
 
