@@ -1,5 +1,6 @@
 package com.echoless.atmv2;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -29,6 +30,13 @@ public class MainActivity extends BaseActivity {
             startActivityForResult(intent,RC_LOGIN);
         }
         RecyclerView recyclerView = findViewById(R.id.recyler);
+
+        MyDBHelper helper = new MyDBHelper(this,"expensive.db",null,1);
+        ContentValues values = new ContentValues();
+        values.put("cdate","2018-12-18");
+        values.put("info","bun");
+        values.put("amount",60);
+        helper.getWritableDatabase().insert("exp",null,values);
     }
 
 
