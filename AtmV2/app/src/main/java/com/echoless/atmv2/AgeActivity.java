@@ -3,11 +3,13 @@ package com.echoless.atmv2;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
@@ -42,8 +44,20 @@ int[] num = {18,19,20,21};
         }
 
         @Override
-        public void onBindViewHolder(@NonNull AgeHolder viewHolder, int i) {
+        public void onBindViewHolder(@NonNull final AgeHolder viewHolder, final int i) {
             viewHolder.ageText.setText(num[i]+" ");
+            if(num[i]==19){
+             viewHolder.ageText.setTextColor(Color.RED);
+            }
+            viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+
+                public void onClick(View v) {
+                    findViews();
+                    Log.d("AgeActivity","onClick"+num[i]);
+                    edage.setText(viewHolder.ageText.getText().toString());
+                }
+            });
         }
 
         @Override
