@@ -20,6 +20,7 @@
         <activity android:name=".NameActivity" />
         <activity android:name=".AgeActivity" />
         <activity android:name=".GenderActivity" />
+        <activity android:name=".AddActivity"></activity>
     </application>
 
 </manifest>
