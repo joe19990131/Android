@@ -67,6 +67,7 @@
         android:layout_marginTop="36dp"
         android:layout_marginEnd="28dp"
         android:ems="10"
+        android:hint="yyyy/mm/dd"
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
